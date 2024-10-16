@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.divBusqueda{
+    background-color: cornflowerblue;
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    
+}
+.divElementosBusqueda{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem; 
+}
+
+.inputBuscar{
+    padding: .2rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+}
+
+.botonBuscar{
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 7px;
+}
