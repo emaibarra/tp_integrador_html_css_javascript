@@ -7,21 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tp_integrador_html_css_javascript</title>
     <link rel="stylesheet" href="./style.css">
+    <!-- FUENTE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <!-- ICONOS ---->
+    
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
   </head>
 
   <body>
+    <!--Cabecera -->
     <div class="divBusqueda">
       <div class="divElementosBusqueda">
-        <div>
+        <div class="input_BotonBusqueda">
           <input placeholder="Ingrese su busqueda" type="text" class="inputBuscar">
-          <button class="botonBuscar">Buscar</button>
+          <button class="botonBuscar">Buscar <span class="material-symbols-outlined">
+            search
+            </span></button>
         </div>
         <div>
-          <button >Agregar elemento</button>
+          <button class="botonAgregarElemento">Agregar elemento<span class="material-symbols-outlined">
+            add
+            </span></button>
         </div>
       </div>
     </div>  
 
+    <!-- MAIN -->
+     <main>
+        <div class="containter_view">
+          <aside class="lista_aside">
+            <h2>Categorias <span class="material-symbols-outlined">
+              instant_mix
+              </span>
+              <ul id="listaFiltro" />
+          </aside>
+          <div class="tienda">
+
+          </div>
+
+        </div>
+     </main>
 
     <script type="module" src="/main.js"></script>
   </body>

@@ -1,8 +1,9 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: "Oswald", sans-serif;
 }
-
+/* HEADER */
 .divBusqueda{
     background-color: cornflowerblue;
     width: 100vw;
@@ -19,16 +20,65 @@
     padding: 0.5rem; 
 }
 
+.input_BotonBusqueda{
+    display: flex;  
+    justify-content: space-around;
+    gap: 1vh;
+}
+
+.botonAgregarElemento{
+    padding: 10px;
+    border: none;
+    border-radius: 0.7rem;
+    align-items: center;
+    display: flex;
+    border: solid black 1px;
+    transition: 0.2s;
+}
+
 .inputBuscar{
-    padding: .2rem;
+    padding: .4rem;
     border-radius: 5px;
     border: none;
     font-size: 14px;
     outline: none;
+    width: 20vw;
+    height: 3vh;
 }
 
 .botonBuscar{
     background-color: transparent;
     border: 1px solid black;
-    padding: 7px;
+    border-radius: 0.4rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 10vw;
+    height: 4.5vh;
+    transition: 0.2s;
+}
+
+/* BOTONES HOOVER */
+.botonBuscar:hover{
+ cursor: pointer;
+ background-color: rgb(244, 246, 248); ;
+}
+.botonAgregarElemento:hover{
+ cursor: pointer;
+ background-color: rgb(206, 216, 233) ;
+}
+ /*MAIN*/
+ .containter_view{
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr;
+ }
+ .lista_aside{
+background-color: rgb(0, 255, 34);
+height: 92vh;
+text-align: center;
+ }
+
+.tienda{
+background-color: brown;
+height: 92vh;
 }
