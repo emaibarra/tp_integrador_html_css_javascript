@@ -47,6 +47,7 @@
 }
 
 .botonBuscar{
+    color: white;
     background-color: transparent;
     border: 1px solid black;
     border-radius: 0.4rem;
@@ -72,13 +73,138 @@
     display: grid;
     grid-template-columns: 0.2fr 0.8fr;
  }
- .lista_aside{
-background-color: rgb(0, 255, 34);
-height: 92vh;
-text-align: center;
- }
+ 
+ .tienda{
+    background-color: coral;
+    height: 92vh;
+}
+    
+    /* LISTAS DEL COSTADO */
+.lista_aside{
+   background-color: lightgrey;
+   height: 92vh;
+   display: flex;
+   text-align: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: medium;
+}
 
-.tienda{
-background-color: brown;
-height: 92vh;
+.lista_aside_h2{
+    display: flex;
+    font-size: 3vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.listaFiltro{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    margin-top: 2vh;
+}
+.listaFiltro:hover{
+    cursor: pointer;
+}
+
+.listaSeleccionada {
+    text-decoration: underline;
+    color: white;
+    border-radius: 4px;
+    background-color: rgb(56, 82, 107);
+    transition: 0.2s;
+    height: 3vh;
+    width: 16vw;
+}
+
+/* POPUP */
+
+.PopUpContainerMain{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+}
+
+.PopUpContainer{
+    width: 50vw;
+    height: 50vh;
+    background-color: aliceblue;
+    box-shadow: 5px 2px 10px 10px rgba(0, 0, 0, 0.3);
+    border-radius: .4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+
+.PopUpContainer h2{
+    text-align: center;
+    padding: 15px;
+}
+
+.inputs_popups{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    
+}
+.inputs_popups select,
+.inputs_popups input{
+    width: 80%;
+    border: solid gray 1px;
+    padding: .4rem;
+    border-radius: .4rem;
+}
+
+.divBotonesPopUp{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.botonPopUp{
+    font-size: 2vh;
+    background-color: lightgray;
+    border: none;
+    border-radius: .4rem;
+    padding: .7rem;
+    transition: 0.2s;
+}
+
+.Agregar:hover{
+    cursor: pointer;
+    background-color: green;
+    transition: 0.2s;
+}
+
+.Cancelar:hover{
+    cursor: pointer;
+    background-color: rgb(184, 184, 59);
+    transition: 0.2s;
+}
+
+.Eliminar:hover{
+    cursor: pointer;
+    background-color: rgb(184, 73, 73);
+    transition: 0.2s;
+}
+
+.Agregar{
+    background-color: rgb(118, 209, 118);
+}
+
+.Cancelar{
+    background-color:rgb(245, 245, 68);
+}
+
+.Eliminar{
+    background-color:lightcoral;
 }

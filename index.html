@@ -38,17 +38,54 @@
      <main>
         <div class="containter_view">
           <aside class="lista_aside">
-            <h2>Categorias <span class="material-symbols-outlined">
+            <h2 class="lista_aside_h2">Categorias <span class="material-symbols-outlined">
               instant_mix
               </span>
-              <ul id="listaFiltro" />
+            </h2>
+              <ul id="listaFiltro" class="listaFiltro"/>
           </aside>
           <div class="tienda">
 
           </div>
 
         </div>
-     </main>
+
+        <!-- POPUP -->
+        <div class="PopUpContainerMain" id="modalPopUp">
+          <div class="PopUpContainer">
+
+            <h2>Agregar o modificar producto</h2>
+
+              <div class="inputs_popups">
+                <input placeholder="Ingrese un nombre" id="nombre" type="text">
+                <input placeholder="Precio" value="0" id="precio" type="number">
+                <input placeholder="Ingrese una imagen" id="img" type="text">
+
+                  <select id="selectCategoria">
+                    <option value="">Seleccione una categoria</option>
+                    <option value="">Gaseosas</option>
+                    <option value="">hamburguesas</option>
+                    <option value="">papas</option>
+                  </select>
+
+              </div>
+                <div class="divBotonesPopUp">
+                  <button class="botonPopUp Agregar" id="botonAgregar">Agregar</button>
+                  <button class="botonPopUp Cancelar" id="botonCancelar">Cancelar</button>
+                  <button class="botonPopUp Eliminar" id="botonEliminar">Eliminar</button>
+                </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+      </main>
 
     <script type="module" src="/main.js"></script>
   </body>
