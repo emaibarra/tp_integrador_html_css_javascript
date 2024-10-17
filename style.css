@@ -62,7 +62,7 @@
 /* BOTONES HOOVER */
 .botonBuscar:hover{
  cursor: pointer;
- background-color: rgb(244, 246, 248); ;
+ background-color: rgb(157, 192, 224); ;
 }
 .botonAgregarElemento:hover{
  cursor: pointer;
@@ -81,7 +81,7 @@
     
     /* LISTAS DEL COSTADO */
 .lista_aside{
-   background-color: lightgrey;
+   background-color: rgb(200, 224, 245);
    height: 92vh;
    display: flex;
    text-align: center;
@@ -126,7 +126,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(4px);
