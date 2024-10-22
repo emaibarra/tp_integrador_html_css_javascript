@@ -77,8 +77,62 @@
  /* TIENDA */
 
  .tienda{
+    max-height: 92vh;
+    overflow-y: auto;
     background-color: coral;
     height: 92vh;
+}
+
+.sectionTienda{
+    background-color: aliceblue;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.tituloSeccion{
+    margin: 1rem;
+    font-size: 3vh;
+    border-bottom: 1px solid gray;
+}
+
+.productoTienda{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 0.6fr);
+    gap: 2vh;
+    padding: 1rem;
+}
+
+.targetItem{
+    height: 35vh;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.4rem;
+    box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.3);
+    background-color: aliceblue;
+    border-radius: .4rem;
+}
+
+.targetItem h2{
+    font-size: 2vh;
+    text-align: center;
+}
+
+.targetProps{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sectionTienda img{
+ width: 100%;
+ border-radius: .4rem;
+ box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.3);
 }
     
 /* LISTAS DEL COSTADO */

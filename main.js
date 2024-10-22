@@ -4,6 +4,10 @@ import { getProductosAtienda, renderList } from "./src/views/tienda";
 import "./style.css";
 
 //aplicacion
+
+
+
+
 getLocalStorage();
 //nos trae los productos a la pantalla 
 getProductosAtienda();
@@ -60,5 +64,6 @@ const agregarEliminarElementos = () =>{
         categoria,
     }
     setLocalStorage(object);
-    //cerrarPopUp();
+    getProductosAtienda();
+    cerrarPopUp();
 }

@@ -18,15 +18,15 @@ export const renderList = (productosIn) =>{
     const grupoProductoRender = (productos, titulo) => {
         if (productos.length > 0){
             const productosHTML = productos.map((producto, index) => {
-                return `<div id='product-${producto.categoria}-${index}'>
+                return `<div class='targetItem' id='product-${producto.categoria}-${index}'>
                 <div>
-                <img src${producto.imagen}/>
+                <img src='${producto.imagen}'/>
                 <div>
                 <h2> ${producto.nombre}</h2>
                 </div>
-                <div>
+                <div class='targetProps'>
                 <p><b>Precio:</b> $ ${producto.precio}</p>
-                <p><b>Categoria:</b> ${producto.categoria}</p>
+                
                 </div>
 
                 </div>
@@ -34,9 +34,11 @@ export const renderList = (productosIn) =>{
             });
 
             return `
-            <section>
+            <section class= 'sectionTienda'>
+            <div class='tituloSeccion'>
             <h3>${titulo}</h3>
-            <div>
+            </div>
+            <div class='productoTienda'>
             ${productosHTML.join("")}
             </div>
             </section>
