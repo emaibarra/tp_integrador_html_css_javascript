@@ -73,13 +73,15 @@
     display: grid;
     grid-template-columns: 0.2fr 0.8fr;
  }
- 
+
+ /* TIENDA */
+
  .tienda{
     background-color: coral;
     height: 92vh;
 }
     
-    /* LISTAS DEL COSTADO */
+/* LISTAS DEL COSTADO */
 .lista_aside{
    background-color: rgb(200, 224, 245);
    height: 92vh;

@@ -1,9 +1,14 @@
-import { setLocalStorage } from "./src/persistence/localstorage";
+import { getLocalStorage, setLocalStorage } from "./src/persistence/localstorage";
 import { renderCategories } from "./src/services/categorias";
+import { getProductosAtienda, renderList } from "./src/views/tienda";
 import "./style.css";
 
-renderCategories();
+//aplicacion
+getLocalStorage();
+//nos trae los productos a la pantalla 
+getProductosAtienda();
 
+renderCategories();
 //Productos//
 const botonAgregarElemento = document.getElementById("botonAgregarElemento");
 
