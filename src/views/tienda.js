@@ -1,6 +1,9 @@
 //TIENDA // 
 
+
+import { setProdActivo } from "../../main";
 import { getLocalStorage } from "../persistence/localstorage"
+import { abrirPopUp } from "./modal";
 
 export const getProductosAtienda = () => {
 
@@ -59,14 +62,14 @@ export const renderList = (productosIn) =>{
     `
 
     const addEvents = (productoIn) =>{
+        
         if(productoIn){
         productoIn.forEach((element, index) => {
-            const productContainer = document.getElementById(
-                `product-${element.categoria}-${index}`
-            )
+            const productContainer = document.getElementById(`product-${element.categoria}-${index}`);
                 productContainer.addEventListener('click', ()=>{
-                    console.log("productoActivo", element);
-                })
+                    setProdActivo(element);
+                    abrirPopUp();
+                });
         });
         }
     }

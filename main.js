@@ -1,69 +1,37 @@
 import { getLocalStorage, setLocalStorage } from "./src/persistence/localstorage";
+import { buscarProductoPorNombre } from "./src/services/barraDeBusqueda";
 import { renderCategories } from "./src/services/categorias";
+import { abrirPopUp } from "./src/views/modal";
 import { getProductosAtienda, renderList } from "./src/views/tienda";
 import "./style.css";
 
 //aplicacion
+export let categoriaActiva = null;
+export const setCategoriaActiva = (categoriaIn) => {
+    categoriaActiva = categoriaIn;
+};
 
-
+export let productoActivo = null;
+export const setProdActivo = (productoIn) => {
+    productoActivo = productoIn;
+};
 
 
 getLocalStorage();
 //nos trae los productos a la pantalla 
 getProductosAtienda();
-
 renderCategories();
-//Productos//
-const botonAgregarElemento = document.getElementById("botonAgregarElemento");
 
+//header
+
+const botonAgregarElemento = document.getElementById("botonAgregarElemento");
 botonAgregarElemento.addEventListener('click', () =>{
  abrirPopUp();
 })
 
+const botonBuscar = document.getElementById("botonBuscar")
+botonBuscar.addEventListener('click', ()=>{
+    buscarProductoPorNombre();
+});
 
 
-//Popup//
-
-const botonCancelar = document.getElementById("botonCancelar")
-
-
-botonCancelar.addEventListener('click', ()=>{
-    cerrarPopUp();
-})
-
-
-//Funciones de abrir y cerrar popup //
-const abrirPopUp = () =>{
-    const popUpmain = document.getElementById("modalPopUp");
-    popUpmain.style.display = "flex";
-}
-const cerrarPopUp = () =>{
-    const popUpmain = document.getElementById("modalPopUp");
-    popUpmain.style.display = "none";
-}
-//guardar o modificar elementos
-
-const botonEliminar = document.getElementById("botonEliminar");
-const botonGuardar = document.getElementById("botonAgregar");
-
-botonGuardar.addEventListener('click', () => {
-    agregarEliminarElementos();
-})
-
-const agregarEliminarElementos = () =>{
-    const nombre = document.getElementById("nombre").value;
-    const imagen = document.getElementById("img").value;
-    const precio = document.getElementById("precio").value;
-    const categoria = document.getElementById("selectCategoria").value;
-
-    let object = {
-        id : new Date().toISOString(),
-        nombre,
-        imagen,
-        precio,
-        categoria,
-    }
-    setLocalStorage(object);
-    getProductosAtienda();
-    cerrarPopUp();
-}

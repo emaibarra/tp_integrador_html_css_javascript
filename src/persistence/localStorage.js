@@ -4,7 +4,6 @@
 //get de localStorage
 export const getLocalStorage = () => {
     const productos = JSON.parse(localStorage.getItem("productos"));
-
     if(productos){
         return productos;
     } else return [];
@@ -21,7 +20,7 @@ export const setLocalStorage = (productoIngresado) =>{
         productsLocal.id === productoIngresado.id
     )
 
-    if(existingIndex===!-1){
+    if(existingIndex !== -1){
         productosEnLocal[existingIndex] = productoIngresado;
     } else{
         productosEnLocal.push(productoIngresado);

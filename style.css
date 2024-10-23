@@ -116,7 +116,15 @@
     box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.3);
     background-color: aliceblue;
     border-radius: .4rem;
+    transition: 0.2s ease;
 }
+
+.targetItem:hover{
+cursor: pointer;
+transform: scale(1.08);
+transition: 0.2s ease;
+}
+
 
 .targetItem h2{
     font-size: 2vh;
@@ -144,6 +152,17 @@
     align-items: center;
     flex-direction: column;
     font-size: medium;
+    
+}
+.lista_aside ul li{
+border-radius: 5px;
+border: 1px solid black;
+transition: 0.2s ease;
+}
+.lista_aside ul li:hover{
+cursor: pointer;
+background-color: rgb(48, 141, 223);
+transition: 0.2s ease;
 }
 
 .lista_aside_h2{
