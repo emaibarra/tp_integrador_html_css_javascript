@@ -40,11 +40,9 @@ const agregarModificarElementos = () =>{
         };
     }
     Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "Producto guardado correctamente.",
-        showConfirmButton: false,
-        timer: 1500
+        title: "Operacion Exitosa!",
+        text: "Se guardaron los cambios!",
+        icon: "success"
       });
       
     setLocalStorage(object);

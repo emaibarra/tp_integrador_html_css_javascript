@@ -159,6 +159,9 @@ transition: 0.2s ease;
     font-size: medium;
     
 }
+
+
+
 .lista_aside ul li{
 border-radius: 5px;
 border: 1px solid black;
@@ -287,4 +290,37 @@ transition: 0.2s ease;
 
 .Eliminar{
     background-color:lightcoral;
+}
+
+/* Media Querys */
+@media screen and (max-width: 1280px) {
+    .productoTienda{
+        
+        grid-template-columns: repeat(2, 0.6fr);
+        
+    }
+    .targetItem{
+        width: 25vw;
+    }
+    .sectionTienda img{
+        width: 20vw;
+        height: 25vh;
+       }
+}
+
+/* scrollbr */
+
+::-webkit-scrollbar{
+    width: 0.7rem;
+    background-color: white;
+    border-radius: .4rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: cornflowerblue;
+    border-radius: .4rem;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(65, 123, 231);
+    
 }
