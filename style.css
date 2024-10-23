@@ -83,13 +83,22 @@
     height: 92vh;
 }
 
+.sectionTienda img{
+    width: 15vw;
+    height: 25vh;
+    border-radius: .4rem;
+    box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.3);
+   }
+
 .sectionTienda{
     background-color: aliceblue;
     margin: 1rem;
+    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-radius: 10px;
 }
 .tituloSeccion{
     margin: 1rem;
@@ -101,13 +110,13 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 0.6fr);
-    gap: 2vh;
+    gap: 1vh;
     padding: 1rem;
 }
 
 .targetItem{
-    height: 35vh;
     width: 20vw;
+    height: 35vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,7 +130,7 @@
 
 .targetItem:hover{
 cursor: pointer;
-transform: scale(1.08);
+transform: scale(1.05);
 transition: 0.2s ease;
 }
 
@@ -137,11 +146,7 @@ transition: 0.2s ease;
     width: 100%;
 }
 
-.sectionTienda img{
- width: 100%;
- border-radius: .4rem;
- box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.3);
-}
+
     
 /* LISTAS DEL COSTADO */
 .lista_aside{

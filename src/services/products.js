@@ -1,4 +1,5 @@
 
+import Swal from "sweetalert2";
 import { productoActivo } from "../../main";
 import { getLocalStorage, setLocalStorage } from "../persistence/localstorage";
 import { cerrarPopUp } from "../views/modal";
@@ -38,20 +39,45 @@ const agregarModificarElementos = () =>{
             categoria,
         };
     }
-
+    Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Producto guardado correctamente.",
+        showConfirmButton: false,
+        timer: 1500
+      });
+      
     setLocalStorage(object);
     getProductosAtienda();
     cerrarPopUp();
 }
 
-//eliminar elemento?
+//eliminar elemento
 
 export const borrarProducto=() =>{
-const productos = getLocalStorage();
-const resultado = productos.filter((el) => el.id !== productoActivo.id);
+    Swal.fire({
+        title: "Estas seguro?",
+        text: "Esta acción no se puede deshacer!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Si, eliminalo!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+            const productos = getLocalStorage();
+            const resultado = productos.filter((el) => el.id !== productoActivo.id);
+            
+            localStorage.setItem("productos", JSON.stringify(resultado));
+            const nuevoProducto = getLocalStorage();
+            renderList(nuevoProducto);
+            cerrarPopUp();
+        } else{
+            cerrarPopUp();
+        }
+      });
 
-localStorage.setItem("productos", JSON.stringify(resultado));
-const nuevoProducto = getLocalStorage();
-renderList(nuevoProducto);
-cerrarPopUp();
+
+
+
 };
